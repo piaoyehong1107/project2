@@ -1,0 +1,12 @@
+<h1> Profile </h1>
+<hr>
+Name: <%= @customer.name %></br>
+Age: <%= @customer.age %></br>
+Phone Number: <%= @customer.phone_number %></br>
+Address: <%= @customer.address %></br>
+Email: <%= @customer.email %></br>
+Salary: <%= @customer.salary %></br>
+Account: <% @customer.cards.each do |card| %>
+            <%= card.name %></br>
+            <% end %>
+

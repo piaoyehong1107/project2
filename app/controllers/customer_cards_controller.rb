@@ -1,0 +1,3 @@
+class CustomerCardsController < ApplicationController
+    
+end

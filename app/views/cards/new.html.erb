@@ -1,0 +1,7 @@
+<%= form_for @card do |f| %>
+    <%= f.label "Card Name: " %>
+    <%= f.text_field :name %></br>
+    Select Bank: <%= f.collection_select :bank_id, Bank.all, :id, :name %></br>
+    Select Customer: <%= f.collection_select :customer_ids, Customer.all, :id, :name %></br>
+ <%= f.submit %>
+<% end %>
