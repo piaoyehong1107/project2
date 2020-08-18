@@ -1,0 +1,14 @@
+
+<h1> New Transaction </h1>
+ <hr>
+<%= form_for @transaction do |f| %>
+    <%= f.label "Amount " %>
+    <%= f.text_field :amount %></br>
+    <%= f.label "Customer" %>
+    <%= f.collection_select :customer_id, Customer.all, :id, :name %></br>
+    <%= f.label "From" %>
+    <%= f.collection_select :card_id, Card.all, :id, :name %></br>
+    <%= Time.now.strftime (" %m/%d/%Y%I:%M") %>   </br>  
+    <%= f.submit %> </br>  
+
+<% end %>
