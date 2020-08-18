@@ -6,7 +6,12 @@ class CardsController < ApplicationController
         @card=Card.new
     end
     def create 
-        @card=Card.create(name:params[:card][:name],bank_id:params[:card][:bank_id])
+        @card=Card.create(card_params)
         redirect_to card_path(@card)
+    end
+    
+    private
+    def card_params
+        params.require(:card).permit(:name,:bank_id)
     end
 end
