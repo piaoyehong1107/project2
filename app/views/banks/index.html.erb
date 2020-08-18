@@ -1,4 +1,7 @@
+<body style="background-color:powderblue;">
 <h1>List of Banks</h1>
+<hr>
 <% @banks.each do |bank| %>
     <h3><%= link_to bank.name, bank_path(bank) %></br></h3>
 <% end %>
+</body>

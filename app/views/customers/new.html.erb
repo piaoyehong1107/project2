@@ -12,11 +12,9 @@
     <%= f.text_field :email %></br>
     <%= f.label "Salary " %>
     <%= f.text_field :salary %></br>
-    Your Card:
+    Please choose your card below:
+   <p> 
     <%= f.collection_check_boxes :card_ids, Card.all, :id, :name %></br>
-    <%= f.fields_for :cards, @customer.cards.build do |card_fields|%>
-     Card Name: <%= card_fields.text_field :name %>
-     Select Bank: <%= card_fields.collection_select :bank_id, Bank.all, :id, :name %></br>
-    <% end %>
+    </p>
  <%= f.submit %>
 <% end %>
