@@ -7,8 +7,7 @@
     <%= f.label "Customer" %>
     <%= f.collection_select :customer_id, Customer.all, :id, :name %></br>
     <%= f.label "From" %>
-    <%= f.collection_select :cards_id, Card.all, :id, :name %></br>
-    
+    <%= f.collection_select :card_id, Card.all, :id, :name %></br>
     <%= f.submit %> </br>  
 
 <% end %>
