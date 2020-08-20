@@ -5,6 +5,7 @@ class Customer < ApplicationRecord
 
     validates :name, presence: true
     validates :age, numericality: { greater_than: 19}
+    validates :eamil, uniqueness: true
     validates :salary, numericality: { other_than: 0 }
-    
+
 end
