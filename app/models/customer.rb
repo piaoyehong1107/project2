@@ -7,5 +7,6 @@ class Customer < ApplicationRecord
     validates :age, numericality: { greater_than: 19}
     validates :eamil, uniqueness: true
     validates :salary, numericality: { other_than: 0 }
+    validates :phone_number, length: {is: 10}
 
 end
