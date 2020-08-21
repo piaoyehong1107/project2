@@ -1,0 +1,8 @@
+
+<h3 style="background-color:powderblue;padding:12px 24px">List of Cards</h3>
+<hr>
+<div style="background-color:#eeeeee;padding:6px 24px">
+<% @cards.each do |card| %>
+    <h5 style="padding:0px 24px"><%= card.name %></br></h5>
+<% end %>
+</div>

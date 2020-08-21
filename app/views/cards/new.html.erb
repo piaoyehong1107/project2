@@ -1,6 +1,23 @@
 <%= form_for @card do |f| %>
-    <%= f.label "Card Name: " %>
-    <%= f.text_field :name %></br>
-    Select Bank: <%= f.collection_select :bank_id, Bank.all, :id, :name %></br>
- <%= f.submit %>
+
+    <% if @card.errors.any? %>
+        <div id="error_explanation" style="color:red;" >
+            <ul> 
+                <% @card.errors.full_messages.each do |mes| %>
+                    <li><%= mes %> </li>
+                <% end %>
+            </ul>
+        </div>
+<% end %>
+ <hr>
+<h3 style="padding:12px 24px;background-color:powderblue">Card Form</h3>   
+<div id="customer_form" style="background-color:#eeeeee;padding:6px 24px">
+        <br/>
+        <div style="padding: 2px 0"><%= f.label "Card Name: " %><%= f.text_field :name %></br></div>
+        Please choose your Bank below:
+        <p> 
+        <%= f.collection_select :bank_id, Bank.all, :id, :name %></br>
+        </p>
+        <%= f.submit %>
+    </div>
 <% end %>
