@@ -1,8 +1,7 @@
-<body style="background-color:powderblue;">
-<h1>List of Customers</h1>
+<body style="background-color:#eeeeee;">
+<h3 style="background-color:powderblue;padding:12px 24px">List of Customers</h3>
 <hr>
 <% @customers.each do |customer| %>
-    <h3><%= link_to customer.name, customer_path(customer) %></br></h3>
-    <h3><%= customer.id%></br></h3>
+    <h5 style="padding:0px 24px"><%= link_to customer.name, customer_path(customer) %></br></h5>
 <% end %>
 </body>
