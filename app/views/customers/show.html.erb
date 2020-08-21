@@ -8,7 +8,10 @@ Email: <%= @customer.email %></br>
 Salary: <%= @customer.salary %></br></br>
 Account: </br>
     <% @customer.cards.each do |card| %>
-          <li> <%= card.name %> </li>
+          <li> <%=card.name %> </br>
+          <% card.transactions.each do |trans| %> 
+             - $<%= trans.amount %> made on <%= trans.created_at.strftime("%m/%d/%Y")%></li>
+            <% end %>
     <% end %></br>
 
 <%= link_to "Edit", edit_customer_path(@customer) %></br>

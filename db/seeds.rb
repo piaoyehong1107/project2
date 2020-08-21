@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
 chase=Bank.create(name:"Chase")
 amex=Bank.create(name:"American Express")
 citi=Bank.create(name:"Citi Bank")
