@@ -1,13 +1,14 @@
-
-<h1> New Transaction </h1>
+<h3 style="padding:12px 24px;background-color:powderblue">New Transaction</h3>
  <hr>
+ <div id="customer_form" style="background-color:#eeeeee;padding:6px 24px">
+        <br/>
 <%= form_for @transaction do |f| %>
-    <%= f.label "Amount " %>
-    <%= f.text_field :amount %></br>
-    <%= f.label "Customer" %>
-    <%= f.collection_select :customer_id, Customer.all, :id, :name %></br>
-    <%= f.label "From" %>
-    <%= f.collection_select :card_id, Card.all, :id, :name %></br>
-    <%= f.submit %> </br>  
-
+    <div style="padding: 2px 0"><%= f.label "Amount " %><br/></div>
+    <div style="padding: 2px 0"><%= f.text_field :amount %></br></div>
+    <div style="padding: 2px 0"> <%= f.label "Customer" %><br/></div>
+    <div style="padding: 2px 0"><%= f.collection_select :customer_id, Customer.all, :id, :name %><br/></div>
+    <div style="padding: 2px 0"><%= f.label "From" %><br/></div>
+    <div style="padding: 2px 0"><%= f.collection_select :card_id, Card.all, :id, :name %></br></br></div>
+    <div style="padding: 2px 0"><%= f.submit %> </br></div>
+    </div>
 <% end %>

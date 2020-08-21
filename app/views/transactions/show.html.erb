@@ -1,5 +1,8 @@
-
-Amount: <%= @transaction.amount %></br>
-Customer: <%= @transaction.customer.name %></br>
-Card: <%= @transaction.card.name %></br>
-Time: <%= Time.now.strftime (" %m/%d/%Y") %>   </br> 
+<h3 style="padding:12px 24px;background-color:powderblue">Transaction Details</h3>
+<hr>
+<div style="background-color:#eeeeee;padding:6px 24px">
+Amount: <%= @transaction.amount %></br></br>
+Customer: <%= @transaction.customer.name %></br></br>
+Card: <%= @transaction.card.name %></br></br>
+Time: <%= Time.now.strftime (" %m/%d/%Y") %></br></br>
+</div>
