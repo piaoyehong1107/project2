@@ -1,7 +1,8 @@
 <h3 style="background-color:powderblue;padding:12px 24px">Bank Info</h3>
 <hr>
 <div style="background-color:#eeeeee;padding:6px 24px">
-<%= @bank.name %>
+<h4><%= @bank.name %> </h4><br>
+<img src="<%=@bank.img_url %>" width="300"></br>
 <% @bank.cards.each do |card| %>
      <h5><li><%= card.name %></li></h5> 
 <% end %>

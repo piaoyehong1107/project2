@@ -6,9 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-chase=Bank.create(name:"Chase")
-amex=Bank.create(name:"American Express")
-citi=Bank.create(name:"Citi Bank")
+chase=Bank.create(name:"Chase", img_url:"https://vestar.com/wp-content/uploads/2015/05/chase-logo.jpg")
+amex=Bank.create(name:"American Express", img_url:"https://s3.amazonaws.com/blog.invisionapp.com/uploads/2018/04/amex-logo.png")
+citi=Bank.create(name:"Citi Bank", img_url:"https://logos-download.com/wp-content/uploads/2016/03/Citibank_logo.png")
 
 
 tom=Customer.create(name:"Tom", age:28, phone_number:"2819034345", address:"Houston", email:"123@live.come", salary:"100k")

@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 2020_08_17_193519) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
+    t.string "img_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
