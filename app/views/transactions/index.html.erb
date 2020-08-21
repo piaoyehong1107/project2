@@ -1,9 +1,16 @@
-<<<<<<< HEAD
+
 <h1> Transaction Record </h1>
 <hr>
-=======
+
 <% @transactions.each do |tran| %>
     <%= tran.customer.name %>
     <%= tran.amount %><br>
     <% end %>
->>>>>>> 263b9635f45fcfeda0948c6d5760addc026a6301
+
+<body style="background-color:#eeeeee;">
+<h3 style="background-color:powderblue;padding:12px 24px">List of Transactions</h3>
+<hr>
+<% @transactions.each do |tran| %>
+    <h5 style="padding:0px 24px"><%= tran.customer.name %> - <%= tran.card.name %> - $<%= tran.amount %><br><br></h5>
+<% end %>
+

@@ -1,2 +1,11 @@
+
 <h1><%= @bank.name %></h1> 
-<map> 
+
+<h3 style="background-color:powderblue;padding:12px 24px">Bank Info</h3>
+<hr>
+<div style="background-color:#eeeeee;padding:6px 24px">
+<%= image_tag ("logos/chase_logo.png"), width: '100px' %>
+<% @bank.cards.each do |card| %>
+    <h5><%= card.name %></h5> 
+<% end %>
+
