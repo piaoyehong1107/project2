@@ -1,16 +1,7 @@
-
-<h1> Transaction Record </h1>
-<hr>
-
-<% @transactions.each do |tran| %>
-    <%= tran.customer.name %>
-    <%= tran.amount %><br>
-    <% end %>
-
 <body style="background-color:#eeeeee;">
 <h3 style="background-color:powderblue;padding:12px 24px">List of Transactions</h3>
 <hr>
 <% @transactions.each do |tran| %>
-    <h5 style="padding:0px 24px"><%= tran.customer.name %> - <%= tran.card.name %> - $<%= tran.amount %><br><br></h5>
+    <h5 style="padding:0px 24px"><%= link_to tran.customer.name, transaction_path(tran) %> - <%= tran.card.name %> - $<%= tran.amount %><br><br></h5>
 <% end %>
 

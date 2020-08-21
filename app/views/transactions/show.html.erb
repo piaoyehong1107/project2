@@ -2,7 +2,7 @@
 <hr>
 <div style="background-color:#eeeeee;padding:6px 24px">
 Amount: <%= @transaction.amount %></br></br>
-Customer: <%= @transaction.customer.name %></br></br>
+Customer: <%= link_to @transaction.customer.name, customer_path(@transaction.customer.id)%></br></br>
 Card: <%= @transaction.card.name %></br></br>
 Time: <%= Time.now.strftime (" %m/%d/%Y") %></br></br>
 </div>
